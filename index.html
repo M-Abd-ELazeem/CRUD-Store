@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Store </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:wght@600&family=Varela+Round&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:wght@600&family=Varela+Round&display=swap"
+    rel="stylesheet">
+  <a href="" class="text-white " target="_blank"></a>
+
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+</div>
+
+
+<body>
+  <main class="py-5">
+    <div class="container  d-flex flex-column justify-content-center align-content-center">
+      <div class=" row ">
+
+        <div
+          class=" header position-relative py-2 text-center pacifico-regular d-flex  justify-content-center align-content-center ">
+          <h1 class="position-relative py-2">Bookmarker</h1>
+        </div>
+
+        <!-- 11111111 -->
+
+        <div class="content  p-3 mt-5 d-flex flex-column justify-content-center align-content-center gap-4">
+          <div class="head text-center mb-3">
+            <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i>
+            </h2>
+          </div>
+
+          <div class="input my-2 w-100 d-flex  flex-column justify-content-center ">
+            <label class="site-name pb-1 fw-semibold" for="bookmark"><i class="fa-solid fa-book"></i>
+              &nbsp;Site Name</label>
+            <input oninput="validateInputs(this)" class="form-control" type="text" id="bookmarkname"
+              placeholder="Bookmark Name">
+          </div>
+
+          <div class="input my-2 w-100 d-flex  flex-column justify-content-center ">
+            <label class="site-url pb-1 fw-semibold" for="url"><i class="fa-solid fa-link"></i>&nbsp;Site URL</label>
+            <input oninput="validateInputs(this)" class="form-control" type="url" id="bookmarkurl"
+              placeholder=" Website URL">
+          </div>
+
+          <div class=" text-center">
+            <button onclick="addBook();" class="btn btn-submit px-5 " id="submitBtn"> Submint </button>
+          </div>
+
+        </div>
+
+
+
+        <table class="table mt-4 text-center bg-ligh">
+          <thead>
+            <tr>
+              <th class="text-capitalize">Index</th>
+              <th class="text-capitalize">Website Name </th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr>
+          </thead>
+
+          <tbody class="tableContent " id="tableContent">
+
+          </tbody>
+        </table>
+
+      </div>
+
+
+
+
+
+  </main>
+  <div
+    class="lightbox-container  d-none justify-content-center align-items-center top-0 bottom-0 end-0 start-0 position-fixed">
+    <div class="lightbox-item d-flex rounded-2 py-2">
+      <div>
+
+        <div class="head d-flex fs-5 px-4 py-3 justify-content-between align-content-start">
+          <div class="circle">
+            <i class="fa-solid fa-circle text-danger"></i>
+            <i class="fa-solid fa-circle text-warning"></i>
+            <i class="fa-solid fa-circle text-success"></i>
+          </div>
+          <div class="xmark"><button class="closeBtn border-0 bg-transparent text-black fs-4" id="closeBtn"> <i
+                id="clos" class="fa-solid fa-xmark"></i></button></div>
+
+        </div>
+        <div class="fs-5 px-4 py-4">
+          <p class="m-0 pb-2">Site Name or Url is not valid, Please follow the rules below :</p>
+          <ol class="list-unstyled m-0">
+            <li><i class="fa-solid fa-circle-right p-2 text-danger"></i>Site name must contain at least 3 characters
+            </li>
+            <li><i class="fa-solid fa-circle-right p-2 text-danger"></i>Site URL must be a valid one</li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
